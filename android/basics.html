@@ -54,12 +54,13 @@
     <section class="slide">
       <h2>Introduction to Activities</h2>
       <p>what is an activity</p>
-      <img src="images/android-activities-views-5-638.jpg" alt="android activities">
+      <img src="images/android-activities-views-5-638.jpg" alt="android activities"/>
     </section>
+
     <section class="slide">
       <h2>Introduction to Activities</h2>
       <p>what is an activity</p>
-      <img src="images/android-activities-views-6-638.jpg" alt="android activities">
+      <img src="images/android-activities-views-6-638.jpg" alt="android activities"/>
 
     </section>
 
@@ -71,7 +72,7 @@
         can be activated by sending a message to it.<br/> If you want to show (activate) an Activity, you
         need to create a message, send it to the runtime, and let the runtime activate it for you
       </p>
-      To activate a component, like an Activity, we need to do the following.
+      <p>To activate a component, like an Activity, we need to do the following.</p>
       <ol>
         <li>Create an Intent object</li>
         <li>Specify what we want to do or maybe even how to do it</li>
@@ -83,6 +84,32 @@
 
     <section class="slide">
       <h2>Introduction to Intents</h2>
+      <p>we’ll take a look at
+        a couple of interesting things about intents and activities. For example:</p>
+        <ul>
+          <li class="slide">Launching another Activity using an explicit intent</li>
+          <li class="slide">Passing data from one activity to another</li>
+          <li class="slide">Returning data from a second activity to the main activity</li>
+          <li class="slide">Life cycle methods of activities</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Intents</h2>
+      <pre>
+        // FirstActivity.java
+          class FirstActivity extends AppCompatActivity implements View.OnClickListener {
+            public void onClick(View v) {
+                Intent intent = new Intent(this, SecondActivity.class);
+                startActivity(intent);
+            }
+          }
+          // SecondActivity.java
+          class SecondActivity extends AppCompatActivity {
+            
+          }
+      </pre>
+
     </section>
 
     <!-- End slides. -->
